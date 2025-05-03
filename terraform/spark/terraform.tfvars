@@ -1,0 +1,5 @@
+kubernetes_host = "https://<your-eks-api-endpoint>"
+kubernetes_cluster_ca_certificate = "<base64-encoded-ca-cert>"
+kubernetes_token = "<your-service-account-token>"
+spark_namespace = "spark"
+spark_chart_version = "8.1.4"

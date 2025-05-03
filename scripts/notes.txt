@@ -1,0 +1,130 @@
+NAME: iceberg-spark
+LAST DEPLOYED: Thu May  1 21:35:52 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+CHART NAME: spark
+CHART VERSION: 9.3.7
+APP VERSION: 3.5.5
+
+Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami for more information.
+
+** Please be patient while the chart is being deployed **
+
+1. Get the Spark master WebUI URL by running these commands:
+
+  kubectl port-forward --namespace default svc/iceberg-spark-master-svc 80:80
+  echo "Visit http://127.0.0.1:80 to use your application"
+
+2. Submit an application to the cluster:
+
+  To submit an application to the cluster the spark-submit script must be used. That script can be
+  obtained at https://github.com/apache/spark/tree/master/bin. Also you can use kubectl run.
+
+  export EXAMPLE_JAR=$(kubectl exec -ti --namespace default iceberg-spark-worker-0 -- find examples/jars/ -name 'spark-example*\.jar' | tr -d '\r')
+
+  kubectl exec -ti --namespace default iceberg-spark-worker-0 -- spark-submit --master spark://iceberg-spark-master-svc:7077 \
+    --class org.apache.spark.examples.SparkPi \
+    $EXAMPLE_JAR 5
+
+** IMPORTANT: When submit an application from outside the cluster service type should be set to the NodePort or LoadBalancer. **
+
+** IMPORTANT: When submit an application the --master parameter should be set to the service IP, if not, the application will not resolve the master. **
+
+
+
+
+WARNING: There are "resources" sections in the chart not set. Using "resourcesPreset" is not recommended for production. For production installations, please set the following values according to your workload needs:
+  - master.resources
+  - worker.resources
++info https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+
+
+Release "iceberg-spark" has been upgraded. Happy Helming!
+NAME: iceberg-spark
+LAST DEPLOYED: Thu May  1 21:40:37 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+NOTES:
+CHART NAME: spark
+CHART VERSION: 9.3.7
+APP VERSION: 3.5.5
+
+Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami for more information.
+
+** Please be patient while the chart is being deployed **
+
+1. Get the Spark master WebUI URL by running these commands:
+
+  kubectl port-forward --namespace default svc/iceberg-spark-master-svc 80:80
+  echo "Visit http://127.0.0.1:80 to use your application"
+
+2. Submit an application to the cluster:
+
+  To submit an application to the cluster the spark-submit script must be used. That script can be
+  obtained at https://github.com/apache/spark/tree/master/bin. Also you can use kubectl run.
+
+  export EXAMPLE_JAR=$(kubectl exec -ti --namespace default iceberg-spark-worker-0 -- find examples/jars/ -name 'spark-example*\.jar' | tr -d '\r')
+
+  kubectl exec -ti --namespace default iceberg-spark-worker-0 -- spark-submit --master spark://iceberg-spark-master-svc:7077 \
+    --class org.apache.spark.examples.SparkPi \
+    $EXAMPLE_JAR 5
+
+** IMPORTANT: When submit an application from outside the cluster service type should be set to the NodePort or LoadBalancer. **
+
+** IMPORTANT: When submit an application the --master parameter should be set to the service IP, if not, the application will not resolve the master. **
+
+
+
+
+WARNING: There are "resources" sections in the chart not set. Using "resourcesPreset" is not recommended for production. For production installations, please set the following values according to your workload needs:
+  - master.resources
+  - worker.resources
++info https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+
+
+NAME: iceberg-spark
+LAST DEPLOYED: Fri May  2 08:16:47 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None
+NOTES:
+CHART NAME: spark
+CHART VERSION: 9.3.7
+APP VERSION: 3.5.5
+
+Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami for more information.
+
+** Please be patient while the chart is being deployed **
+
+1. Get the Spark master WebUI URL by running these commands:
+
+  kubectl port-forward --namespace default svc/iceberg-spark-master-svc 80:80
+  echo "Visit http://127.0.0.1:80 to use your application"
+
+2. Submit an application to the cluster:
+
+  To submit an application to the cluster the spark-submit script must be used. That script can be
+  obtained at https://github.com/apache/spark/tree/master/bin. Also you can use kubectl run.
+
+  export EXAMPLE_JAR=$(kubectl exec -ti --namespace default iceberg-spark-worker-0 -- find examples/jars/ -name 'spark-example*\.jar' | tr -d '\r')
+
+  kubectl exec -ti --namespace default iceberg-spark-worker-0 -- spark-submit --master spark://iceberg-spark-master-svc:7077 \
+    --class org.apache.spark.examples.SparkPi \
+    $EXAMPLE_JAR 5
+
+** IMPORTANT: When submit an application from outside the cluster service type should be set to the NodePort or LoadBalancer. **
+
+** IMPORTANT: When submit an application the --master parameter should be set to the service IP, if not, the application will not resolve the master. **
+
+
+
+
+WARNING: There are "resources" sections in the chart not set. Using "resourcesPreset" is not recommended for production. For production installations, please set the following values according to your workload needs:
+  - master.resources
++info https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
